@@ -6,6 +6,7 @@ import database             # データベースモジュール
 import metrics              # 評価指標モジュール
 import data                 # データモジュール
 import torch
+import csv_download 
 from transformers import pipeline
 from config import MODEL_NAME
 from huggingface_hub import HfFolder
@@ -75,7 +76,8 @@ elif st.session_state.page == "履歴閲覧":
     ui.display_history_page()
 elif st.session_state.page == "サンプルデータ管理":
     ui.display_data_page()
+    csv_download.display_csv_download_section()
 
 # --- フッターなど（任意） ---
 st.sidebar.markdown("---")
-st.sidebar.info("開発者: [Your Name]")
+st.sidebar.info("開発者: [Tora68]")
